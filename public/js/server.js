@@ -6,6 +6,19 @@ let message = document.getElementById("message");
 
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  if (name.value == "") {
+    return alert("please fill in all field");
+  }
+
+  if (email.value == "") {
+    return alert("please fill in all field");
+  }
+  if (subject.value == "") {
+    return alert("please fill in all field");
+  }
+  if (message.value == "") {
+    return alert("please fill in all field");
+  }
 
   let formData = {
     name: name.value,
@@ -19,24 +32,13 @@ contactForm.addEventListener("submit", (e) => {
   xhr.setRequestHeader("content-type", "application/json");
   xhr.onload = function () {
     console.log(xhr.responseText);
+
     if (xhr.responseText == "success") {
       alert("Email sent");
       name.value = "";
       email.value = "";
       subject.value = "";
       message.value = "";
-    }
-    if (name.value == "") {
-      alert("please fill in all field");
-    }
-    if (email.value == "") {
-      alert("please fill in all field");
-    }
-    if (subject.value == "") {
-      alert("please fill in all field");
-    }
-    if (message.value == "") {
-      alert("please fill in all field");
     } else {
       alert("Someting went wrong");
     }
