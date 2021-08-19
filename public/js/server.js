@@ -25,6 +25,18 @@ contactForm.addEventListener("submit", (e) => {
       email.value = "";
       subject.value = "";
       message.value = "";
+    }
+    if (name.value == "") {
+      alert("please fill in all field");
+    }
+    if (email.value == "") {
+      alert("please fill in all field");
+    }
+    if (subject.value == "") {
+      alert("please fill in all field");
+    }
+    if (message.value == "") {
+      alert("please fill in all field");
     } else {
       alert("Someting went wrong");
     }
