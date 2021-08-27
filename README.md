@@ -1,4 +1,4 @@
 # resume
-*live link 👇🏿
+* live link 👇🏿
 
 http://resume-nodemailer.herokuapp.com/
